@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Logo from './src/components/Logo'
+import Background from './src/components/Background'
 import firebase from 'firebase'
 import { StyleSheet, View, Text } from 'react-native'
 import { createStore, applyMiddleware } from 'redux'
@@ -25,14 +26,9 @@ if(firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig)
 }
 
-import {
-  StartScreen,
-  LoginScreen,
-  RegisterScreen,
-  ResetPasswordScreen,
-} from './src/screens'
+import { StartScreen, LoginScreen, RegisterScreen, ResetPasswordScreen} from './src/screens'
 import MainScreen from './src/Main'
-import Background from './src/components/Background'
+import AddScreen from './src/main/Add'
 
 const Stack = createStackNavigator()
 
@@ -90,7 +86,16 @@ export class App extends Component  {
     }
     return (
       <Provider store={store}>
-        <MainScreen />
+         <NavigationContainer>
+            <Stack.Navigator
+              initialRouteName="LGBT - Accueil"
+              screenOptions={{
+                headerShown: false,
+              }}>
+              <Stack.Screen name="LGBT - Accueil" component={MainScreen} />
+              <Stack.Screen name="LGBT - Add" component={AddScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
       </Provider>
     )
   }
