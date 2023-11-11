@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "LGBTApp",
-    "slug": "LGBTApp",
+    "name": "ReactApp",
+    "slug": "ReactApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/logo.png",
