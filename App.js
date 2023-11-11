@@ -13,13 +13,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk))
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBg67fTOeGJWvPBub9g7OYXrN4COIiZmyI",
-  authDomain: "lgbtapp-34045.firebaseapp.com",
-  projectId: "lgbtapp-34045",
-  storageBucket: "lgbtapp-34045.appspot.com",
-  messagingSenderId: "74881801169",
-  appId: "1:74881801169:web:31b25448bb0781a6941ef0",
-  measurementId: "G-MX35EGF456"
+  //
 };
 
 if(firebase.apps.length === 0) {
@@ -71,15 +65,15 @@ export class App extends Component  {
       return (
           <NavigationContainer>
             <Stack.Navigator
-              initialRouteName="LGBT - Navigation"
+              initialRouteName="Navigation"
               screenOptions={{
                 headerShown: false,
               }}
             >
-              <Stack.Screen name="LGBT - Navigation" component={StartScreen} />
-              <Stack.Screen name="LGBT - Login" component={LoginScreen} />
-              <Stack.Screen name="LGBT - Register" component={RegisterScreen} />
-              <Stack.Screen name="LGBT - ResetPassword"component={ResetPasswordScreen} />
+              <Stack.Screen name="Navigation" component={StartScreen} />
+              <Stack.Screen name="Login" component={LoginScreen} />
+              <Stack.Screen name="Register" component={RegisterScreen} />
+              <Stack.Screen name="ResetPassword"component={ResetPasswordScreen} />
             </Stack.Navigator>
           </NavigationContainer>
       );
