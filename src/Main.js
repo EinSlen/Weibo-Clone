@@ -22,8 +22,8 @@ export class Main extends Component {
     }
     render() {
         return (
-            <Tab.Navigator initialRouteName="LGBT - Feet" labeled={false}>
-                <Tab.Screen name="LGBT - Feet" component={FeetScreen} 
+            <Tab.Navigator initialRouteName="Feet" labeled={false}>
+                <Tab.Screen name="Feet" component={FeetScreen} 
                     options={{
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="home" color={color} size={26} />
@@ -41,7 +41,7 @@ export class Main extends Component {
                             <MaterialCommunityIcons name="plus-box" color={color} size={26} />
                         ),
                 }}/>
-                  <Tab.Screen name="LGBT - Profile" component={ProfileScreen} 
+                  <Tab.Screen name="Profile" component={ProfileScreen} 
                     options={{
                         tabBarIcon: ({ color, size }) => (
                             <MaterialCommunityIcons name="account-circle" color={color} size={26} />
