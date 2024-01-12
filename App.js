@@ -82,12 +82,12 @@ export class App extends Component  {
       <Provider store={store}>
          <NavigationContainer>
             <Stack.Navigator
-              initialRouteName="LGBT - Accueil"
+              initialRouteName="Waibo - Accueil"
               screenOptions={{
                 headerShown: false,
               }}>
-              <Stack.Screen name="LGBT - Accueil" component={MainScreen} />
-              <Stack.Screen name="LGBT - Add" component={AddScreen} />
+              <Stack.Screen name="Waibo - Accueil" component={MainScreen} />
+              <Stack.Screen name="Waibo - Add" component={AddScreen} />
             </Stack.Navigator>
           </NavigationContainer>
       </Provider>
