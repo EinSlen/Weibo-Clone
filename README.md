@@ -4,5 +4,5 @@
   //
 };
 `
-- serveur de developpement tapez la commande : `npm run dev`
+- serveur de developpement tapez la commande : `npm run start`
 - build l'application : `npm run build`
